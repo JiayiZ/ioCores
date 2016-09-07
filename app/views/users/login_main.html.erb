@@ -1,0 +1,31 @@
+
+<div class="row-fluid">
+  <div class="col-lg-6">
+    <div class="outer-div">
+    <div class="inner-div">
+      <h1>User Login</h1>
+      <%= form_for :user, url: users_check_login_path do |f| %>
+        <p>
+          <%= f.label :Email %>
+          <%= f.text_field :email_address,:required => true %><br>
+        </p>
+
+        <p>
+          <%= f.label :Password %>
+          <%= f.password_field :password, :required => true %><br>
+        </p>
+        <p>
+          <%= f.submit "Sign In", class: "btn btn-lg btn-primary"%>
+        </p>
+      <% end %>
+      <%= link_to 'Forgot Password', users_reset_password_main_path %>
+      <p id="notice"><%= notice %></p>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+  <div style="height:100vh;background-image: url(/assets/hel.png);background-color: #21b2fe;background-repeat: no-repeat;">
+
+  </div>
+</div>
+</div>

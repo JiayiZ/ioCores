@@ -1,0 +1,27 @@
+<div class="row-fluid">
+  <div class="col-lg-6">
+    <div class="outer-div">
+    <div class="inner-div">
+<h1>Create an account</h1>
+<h4>What is your e-mail address</h4>
+<%= form_for(:user, method: :get, url: users_check_email_path) do |f| %>
+  <p>
+    <%= f.label :Email %>
+    <%= f.text_field :email_address,:required => true %><br>
+  </p>
+
+  <p>
+    <%= f.submit "Create a New Account", class: "btn btn-lg btn-primary"%>
+  </p>
+<% end %>
+<%= link_to 'Sign In', users_login_main_path %>
+<p id="notice"><%= notice %></p>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+  <div style="height:100vh;background-image: url(/assets/hel.png);background-color: #21b2fe;background-repeat: no-repeat;">
+
+  </div>
+</div>
+</div>
